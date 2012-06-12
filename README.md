@@ -12,7 +12,7 @@ Also simple UI to test it is working.
 
 Also, ant makefile.
 
-WARNING! NON-DEFAULT path is not tested.
+Little warning! Non-default options are not tested (they are rarely used anyway).
 
 ---------------------------
 
