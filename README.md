@@ -10,7 +10,9 @@ Ported from inkscape, java-style path translator.
 
 Also simple UI to test it is working.
 
-Also, ant makefile
+Also, ant makefile.
+
+WARNING! NON-DEFAULT path is not tested.
 
 ---------------------------
 
