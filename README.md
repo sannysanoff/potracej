@@ -19,4 +19,11 @@ WARNING! NON-DEFAULT path is not tested.
 Contains one less then optimal part in decomposer, poorly converted to java due to lack of pointers. 
 Was too tired to sort it out, decomposer is 25% of all CPU work, maybe could be reduced to 10; enough;
 
+---------------------------
+
+Licensed under GPL.
+
+---------------------------
+
+Questions to: san@sysdate.com
 
