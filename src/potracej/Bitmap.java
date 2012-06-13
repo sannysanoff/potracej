@@ -13,6 +13,12 @@ public class Bitmap {
         this.h = h;
     }
 
+    public Bitmap(byte[] arr, int w, int h) {
+        this.arr = arr;
+        this.w = w;
+        this.h = h;
+    }
+
     public void put(int x, int y, byte b) {
         arr[x + w * y] = b;
     }

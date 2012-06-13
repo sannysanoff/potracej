@@ -24,7 +24,40 @@ public class ConvertToJavaCurves {
         return decimalFormat.format(d);
     }
 
-    public static int convert(path_t plist, HashSet<Point2D.Double> points, ArrayList<PathElement> result) {
+    public static class Point {
+        double x, y;
+
+        public Point(double x, double y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            Point point = (Point) o;
+
+            if (Double.compare(point.x, x) != 0) return false;
+            if (Double.compare(point.y, y) != 0) return false;
+
+            return true;
+        }
+
+        @Override
+        public int hashCode() {
+            int result;
+            long temp;
+            temp = x != +0.0d ? Double.doubleToLongBits(x) : 0L;
+            result = (int) (temp ^ (temp >>> 32));
+            temp = y != +0.0d ? Double.doubleToLongBits(y) : 0L;
+            result = 31 * result + (int) (temp ^ (temp >>> 32));
+            return result;
+        }
+    }
+
+    public static int convert(path_t plist, HashSet<Point> points, ArrayList<PathElement> result) {
         int nodeCount = 0;
         int i;
         path_t child;
@@ -43,7 +76,7 @@ public class ConvertToJavaCurves {
             double x2 = pt[2].x;
             double y2 = pt[2].y;
             //Have we been here already?
-            Point2D.Double point = new Point2D.Double(x2, y2);
+            Point point = new Point(x2, y2);
             if (points.contains(point)) {
                 continue;
             } else {

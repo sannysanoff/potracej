@@ -152,7 +152,7 @@ public class Main {
         l = System.currentTimeMillis() - l;
         System.out.println("L="+l);
         ArrayList<PathElement> al = new ArrayList<PathElement>();
-        ConvertToJavaCurves.convert(trace, new HashSet<Point2D.Double>(), al);
+        ConvertToJavaCurves.convert(trace, new HashSet<ConvertToJavaCurves.Point>(), al);
 
         if (result != null)
             result.flush();
