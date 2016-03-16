@@ -21,6 +21,15 @@ Was too tired to sort it out, decomposer is 25% of all CPU work, maybe could be 
 
 ---------------------------
 
+BUILD:
+==============
+run "ant dist" to produce jar file
+
+RUNNING
+==============
+after build, run "java -cp build Main" from the project directory to launch interactive UI.
+
+
 Licensed under GPL.
 
 ---------------------------
